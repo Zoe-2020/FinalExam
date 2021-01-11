@@ -7,9 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="78,47,0,0" VerticalAlignment="Top"/>
-        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="207,47,0,0" VerticalAlignment="Top"/>
-        <ListBox HorizontalAlignment="Left" Height="257" Margin="118,96,0,0" VerticalAlignment="Top" Width="187"/>
+        <CheckBox x:Name="CurrentAccCB" Content="Current Account" HorizontalAlignment="Left" Margin="78,47,0,0" VerticalAlignment="Top" Checked="CurrentAccCB_Checked" Unchecked="CurrentAccCB_Unchecked"/>
+        <CheckBox x:Name="SavingAccCB" Content="Saving Account" HorizontalAlignment="Left" Margin="233,47,0,0" VerticalAlignment="Top" Checked="SavingAccCB_Checked" Unchecked="SavingAccCB_Unchecked"/>
+        <ListBox x:Name="accountLB" HorizontalAlignment="Left" Height="257" Margin="112,131,0,0" VerticalAlignment="Top" Width="187" Loaded="accountLB_Loaded"/>
+        <Label x:Name="AccountListLabel" Content="Account List" HorizontalAlignment="Left" Height="26" Margin="112,100,0,0" VerticalAlignment="Top" Width="73"/>
 
 
     </Grid>

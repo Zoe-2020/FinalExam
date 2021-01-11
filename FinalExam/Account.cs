@@ -8,6 +8,9 @@ namespace FinalExam
 {
     abstract class Account
     {
+        public string AccountNum { get; set; }
+
+        public string AccountType { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
@@ -25,6 +28,9 @@ namespace FinalExam
             return 1 * 2;
         }
 
+       
+
+
         public abstract double CalculateInterest();
     }
     class CurrentAccount : Account
@@ -35,6 +41,22 @@ namespace FinalExam
         {
             return Balance * Interest;
     
+        }
+
+        public CurrentAccount(string accountype, string accountNum ,string firstName, string lastName, double balance)
+        {
+            AccountType = accountype;
+            AccountNum = accountNum;
+            FirstName = firstName;
+            LastName = lastName;
+            Balance = balance;
+            
+
+        }
+
+        public override string ToString()
+        {
+            return string.Format($"{AccountNum}-{FirstName}-{LastName}");
         }
 
 
@@ -50,6 +72,22 @@ namespace FinalExam
         {
             return Balance * Interest;
 
+        }
+
+        public SavingsAccount(string accountype,string accountNum, string firstName, string lastName, double balance)
+        {
+            AccountType = accountype;
+            AccountNum = accountNum;
+            FirstName = firstName;
+            LastName = lastName;
+            Balance = balance;
+            
+
+        }
+
+        public override string ToString()
+        {
+            return string.Format($"{AccountNum}-{FirstName}-{LastName}");
         }
 
 
